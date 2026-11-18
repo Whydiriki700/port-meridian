@@ -47,14 +47,14 @@ export function applyShotScene(game, name) {
     const van = game.vehicles.find((v) => v.isCargoVan);
     if (van) {
       van.mode = 'player';
-      van.x = 1580; van.y = 1000; van.angle = 0; van.speed = 250;
+      van.x = 1990; van.y = 1000; van.angle = 0; van.speed = 235;
       p.inVehicle = true;
       p.vehicle = van;
       p.x = van.x; p.y = van.y;
     }
     game.police.heat = 3.2;
-    addPoliceCar(game, 1430, 955, 0.12, 235);
-    addPoliceCar(game, 1380, 1062, -0.1, 220);
+    addPoliceCar(game, 1752, 958, 0.1, 218);
+    addPoliceCar(game, 1688, 1052, -0.08, 205);
     game.showBanner('HOT CARGO', 'Deliver the van to Solmar Beach House');
     game.bannerTimer = 999;
   } else if (name === 'foot') {
@@ -82,11 +82,16 @@ export function applyShotScene(game, name) {
     p.ammo = 31;
     p.cash = 1740;
     p.armour = 55;
-    game.thugs.push(new Thug(pier.x + 120, pier.y - 62, 'Salt Union enforcer'));
-    game.thugs.push(new Thug(pier.x + 165, pier.y + 66, 'Salt Union enforcer'));
-    game.thugs.push(new Thug(pier.x + 70, pier.y + 128, 'Salt Union enforcer'));
+    const enforcers = [
+      new Thug(pier.x + 58, pier.y - 30, 'Salt Union enforcer'),
+      new Thug(pier.x + 88, pier.y + 26, 'Salt Union enforcer'),
+      new Thug(pier.x + 16, pier.y + 92, 'Salt Union enforcer'),
+    ];
+    for (const t of enforcers) {
+      t.fireCooldown = 0.35;
+      game.thugs.push(t);
+    }
     game.police.heat = 2.1;
-    addPoliceCar(game, pier.x - 260, pier.y - 120, 0.5, 60);
   } else if (name === 'night') {
     // Night run down the coastal avenue, headlights on, one star.
     game.timeOfDay = 21 * 60 + 25;

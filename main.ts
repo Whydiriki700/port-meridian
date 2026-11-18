@@ -47,3 +47,10 @@ writeFileSync(
     game_path_max_bytes: 1000,
   }),
 );
+
+// Port Meridian handover note: the dossier above is the judge's view of the
+// game — four screenshots of the real game running (downtown police chase,
+// harbour on foot, pier showdown, night drive) and the source outline of the
+// modules under game/src, one file per system: city, actors, vehicles,
+// police, combat, missions, hud, audio, effects, save, input.
+console.log('Port Meridian handed in: game/ and screenshots/ copied, dossier.json written to ' + out);

@@ -302,9 +302,9 @@ export function drawWorld(ctx, city, view, night, timeSec) {
   }
   // The pier reaching into the bay.
   ctx.fillStyle = '#8a6b42';
-  ctx.fillRect(3020, 2196, 300, 90);
+  ctx.fillRect(3020, 2196, 364, 90);
   ctx.fillStyle = '#6e5433';
-  for (let px = 3040; px < 3300; px += 44) ctx.fillRect(px, 2196, 5, 90);
+  for (let px = 3040; px < 3370; px += 44) ctx.fillRect(px, 2196, 5, 90);
 
   // Block ground: pavements under the buildings.
   ctx.fillStyle = '#b7ab90';
