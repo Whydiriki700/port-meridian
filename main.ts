@@ -11,6 +11,14 @@
 // Serve it locally with `node serve.ts`, then open http://localhost:8080.
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+//
+// Port Meridian (the game this entry hands in): an original open-world crime
+// game set in a fictional harbour city. The player explores five districts on
+// foot and by car, steals and drives original vehicles in live traffic, runs
+// a five-job story for fixer Mara Voss plus taxi fares, harbour crates and
+// dock runs, fights the Salt Union, and raises a wanted level answered by the
+// Meridian Port Police. HUD with a live minimap, a start screen, pause menu,
+// procedural WebAudio sound and a localStorage save are all in game/.
 
 import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
